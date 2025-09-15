@@ -1,0 +1,31 @@
+# Node
+node_modules/
+.npm/
+
+# Next.js
+.next/
+out/
+
+# Build/coverage (se usar)
+dist/
+build/
+coverage/
+
+# Variáveis de ambiente (NÃO sobe para o GitHub)
+.env
+.env.*
+!.env.example
+
+# Logs
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# SO / editor
+.DS_Store
+Thumbs.db
+*.swp
+
+# Ferramentas (opcionais)
+.turbo/
+.vercel/
