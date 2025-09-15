@@ -1,0 +1,66 @@
+<html>
+
+<body>
+  <div id="app"></div>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!--<script type="text/javascript">
+        // Select the div element with 'app' id
+        const app = document.getElementById('app');
+
+        // Create a new H1 element
+        const header = document.createElement('h1');
+
+        // Create a new text node for the H1 element
+        const text = 'Develop. Preview. Ship.';
+        const headerContent = document.createTextNode(text);
+
+        // Append the text to the H1 element
+        header.appendChild(headerContent);
+
+        // Place the H1 element inside the div
+        app.appendChild(header);
+
+    </script>-->
+  <script type="text/jsx">
+      const app = document.getElementById('app');
+    
+      function Header({title}) {
+        console.log(title);
+        return <h1>{title}</h1>;
+      }
+
+      function Homepage(){
+const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
+
+const [likes, setLikes] = React.useState(0);
+function handleClick(){
+  console.log('Clicked times');
+  setLikes(likes + 1);
+}
+        return(
+            <div>
+                {/* Nesting the Header component */}
+                <Header title="React is title" />
+
+                <ul>
+        {names.map((name) => (
+          <li key={name}>{name}</li>
+        ))}
+      </ul>
+
+      <button onClick={handleClick}>Like({likes})</button>
+  
+
+                
+            </div>
+        )
+      }
+      
+      const root = ReactDOM.createRoot(app);
+      root.render(<Homepage />);
+    </script>
+</body>
+
+</html>
